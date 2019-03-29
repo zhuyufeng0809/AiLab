@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: admin
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: mac
+Implementation-Vendor-Id: Hdu.AiLab
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8
+Main-Class: ${start-class}
+

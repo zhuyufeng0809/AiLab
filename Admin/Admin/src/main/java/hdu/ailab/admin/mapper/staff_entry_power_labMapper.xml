@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hdu.ailab.admin.dao.staff_entry_power_labMapper">
+  <resultMap id="BaseResultMap" type="hdu.ailab.admin.bean.staff_entry_power_lab">
+    <result column="staff_id" jdbcType="INTEGER" property="staffId" />
+    <result column="lab_id" jdbcType="INTEGER" property="labId" />
+    <result column="entry_power_name" jdbcType="VARCHAR" property="entryPowerName" />
+    <result column="entry_power_phone" jdbcType="VARCHAR" property="entryPowerPhone" />
+    <result column="entry_power_user_face" jdbcType="VARCHAR" property="entryPowerUserFace" />
+    <result column="entry_power_finger_print" jdbcType="VARCHAR" property="entryPowerFingerPrint" />
+    <result column="entry_power_time" jdbcType="TIMESTAMP" property="entryPowerTime" />
+  </resultMap>
+  <insert id="insert" parameterType="hdu.ailab.admin.bean.staff_entry_power_lab">
+    insert into staff_entry_power_lab (staff_id, lab_id, entry_power_name, 
+      entry_power_phone, entry_power_user_face, entry_power_finger_print, 
+      entry_power_time)
+    values (#{staffId,jdbcType=INTEGER}, #{labId,jdbcType=INTEGER}, #{entryPowerName,jdbcType=VARCHAR}, 
+      #{entryPowerPhone,jdbcType=VARCHAR}, #{entryPowerUserFace,jdbcType=VARCHAR}, #{entryPowerFingerPrint,jdbcType=VARCHAR}, 
+      #{entryPowerTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="hdu.ailab.admin.bean.staff_entry_power_lab">
+    insert into staff_entry_power_lab
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="staffId != null">
+        staff_id,
+      </if>
+      <if test="labId != null">
+        lab_id,
+      </if>
+      <if test="entryPowerName != null">
+        entry_power_name,
+      </if>
+      <if test="entryPowerPhone != null">
+        entry_power_phone,
+      </if>
+      <if test="entryPowerUserFace != null">
+        entry_power_user_face,
+      </if>
+      <if test="entryPowerFingerPrint != null">
+        entry_power_finger_print,
+      </if>
+      <if test="entryPowerTime != null">
+        entry_power_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="staffId != null">
+        #{staffId,jdbcType=INTEGER},
+      </if>
+      <if test="labId != null">
+        #{labId,jdbcType=INTEGER},
+      </if>
+      <if test="entryPowerName != null">
+        #{entryPowerName,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerPhone != null">
+        #{entryPowerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerUserFace != null">
+        #{entryPowerUserFace,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerFingerPrint != null">
+        #{entryPowerFingerPrint,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerTime != null">
+        #{entryPowerTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="hdu.ailab.admin.bean.staff_entry_power_lab">
+    <result column="staff_id" jdbcType="INTEGER" property="staffId" />
+    <result column="lab_id" jdbcType="INTEGER" property="labId" />
+    <result column="entry_power_name" jdbcType="VARCHAR" property="entryPowerName" />
+    <result column="entry_power_phone" jdbcType="VARCHAR" property="entryPowerPhone" />
+    <result column="entry_power_user_face" jdbcType="VARCHAR" property="entryPowerUserFace" />
+    <result column="entry_power_finger_print" jdbcType="VARCHAR" property="entryPowerFingerPrint" />
+    <result column="entry_power_time" jdbcType="TIMESTAMP" property="entryPowerTime" />
+  </resultMap>
+  <insert id="insert" parameterType="hdu.ailab.admin.bean.staff_entry_power_lab">
+    insert into staff_entry_power_lab (staff_id, lab_id, entry_power_name, 
+      entry_power_phone, entry_power_user_face, entry_power_finger_print, 
+      entry_power_time)
+    values (#{staffId,jdbcType=INTEGER}, #{labId,jdbcType=INTEGER}, #{entryPowerName,jdbcType=VARCHAR}, 
+      #{entryPowerPhone,jdbcType=VARCHAR}, #{entryPowerUserFace,jdbcType=VARCHAR}, #{entryPowerFingerPrint,jdbcType=VARCHAR}, 
+      #{entryPowerTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="hdu.ailab.admin.bean.staff_entry_power_lab">
+    insert into staff_entry_power_lab
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="staffId != null">
+        staff_id,
+      </if>
+      <if test="labId != null">
+        lab_id,
+      </if>
+      <if test="entryPowerName != null">
+        entry_power_name,
+      </if>
+      <if test="entryPowerPhone != null">
+        entry_power_phone,
+      </if>
+      <if test="entryPowerUserFace != null">
+        entry_power_user_face,
+      </if>
+      <if test="entryPowerFingerPrint != null">
+        entry_power_finger_print,
+      </if>
+      <if test="entryPowerTime != null">
+        entry_power_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="staffId != null">
+        #{staffId,jdbcType=INTEGER},
+      </if>
+      <if test="labId != null">
+        #{labId,jdbcType=INTEGER},
+      </if>
+      <if test="entryPowerName != null">
+        #{entryPowerName,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerPhone != null">
+        #{entryPowerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerUserFace != null">
+        #{entryPowerUserFace,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerFingerPrint != null">
+        #{entryPowerFingerPrint,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerTime != null">
+        #{entryPowerTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="hdu.ailab.admin.bean.staff_entry_power_lab">
+    <result column="staff_id" jdbcType="INTEGER" property="staffId" />
+    <result column="lab_id" jdbcType="INTEGER" property="labId" />
+    <result column="entry_power_name" jdbcType="VARCHAR" property="entryPowerName" />
+    <result column="entry_power_phone" jdbcType="VARCHAR" property="entryPowerPhone" />
+    <result column="entry_power_entry_power_user_face" jdbcType="VARCHAR" property="entryPowerEntryPowerUserFace" />
+    <result column="entry_power_finger_print" jdbcType="VARCHAR" property="entryPowerFingerPrint" />
+    <result column="entry_power_time" jdbcType="TIMESTAMP" property="entryPowerTime" />
+  </resultMap>
+  <insert id="insert" parameterType="hdu.ailab.admin.bean.staff_entry_power_lab">
+    insert into staff_entry_power_lab (staff_id, lab_id, entry_power_name, 
+      entry_power_phone, entry_power_user_face,
+      entry_power_finger_print, entry_power_time
+      )
+    values (#{staffId,jdbcType=INTEGER}, #{labId,jdbcType=INTEGER}, #{entryPowerName,jdbcType=VARCHAR}, 
+      #{entryPowerPhone,jdbcType=VARCHAR}, #{entryPowerEntryPowerUserFace,jdbcType=VARCHAR}, 
+      #{entryPowerFingerPrint,jdbcType=VARCHAR}, #{entryPowerTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="hdu.ailab.admin.bean.staff_entry_power_lab">
+    insert into staff_entry_power_lab
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="staffId != null">
+        staff_id,
+      </if>
+      <if test="labId != null">
+        lab_id,
+      </if>
+      <if test="entryPowerName != null">
+        entry_power_name,
+      </if>
+      <if test="entryPowerPhone != null">
+        entry_power_phone,
+      </if>
+      <if test="entryPowerEntryPowerUserFace != null">
+        entry_power_entry_power_user_face,
+      </if>
+      <if test="entryPowerFingerPrint != null">
+        entry_power_finger_print,
+      </if>
+      <if test="entryPowerTime != null">
+        entry_power_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="staffId != null">
+        #{staffId,jdbcType=INTEGER},
+      </if>
+      <if test="labId != null">
+        #{labId,jdbcType=INTEGER},
+      </if>
+      <if test="entryPowerName != null">
+        #{entryPowerName,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerPhone != null">
+        #{entryPowerPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerEntryPowerUserFace != null">
+        #{entryPowerEntryPowerUserFace,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerFingerPrint != null">
+        #{entryPowerFingerPrint,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPowerTime != null">
+        #{entryPowerTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>
