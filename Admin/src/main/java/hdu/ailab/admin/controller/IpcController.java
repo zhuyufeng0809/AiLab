@@ -1,8 +1,8 @@
 package hdu.ailab.admin.controller;
 
 import hdu.ailab.admin.bean.*;
-import hdu.ailab.admin.rto.new_electric_equip;
-import hdu.ailab.admin.rto.new_entry_power;
+import hdu.ailab.admin.rto.ipc.new_electric_equip;
+import hdu.ailab.admin.rto.ipc.new_entry_power;
 import hdu.ailab.admin.service.*;
 import hdu.ailab.admin.util.Message;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,8 +49,8 @@ public class IpcController {
      * @param mac
      * @return
      */
-    @GetMapping("/getAdmin/{mac}")
-    public Message getAdminInformation(@PathVariable("mac") String mac){
+    @GetMapping("/getadmin")
+    public Message getAdminInformation(String mac){
         Integer LabId = Confirm_Identity(mac);
         if (LabId == null){
             return new Message().error(2222,"无此实验室或者Mac地址错误");
@@ -86,8 +86,8 @@ public class IpcController {
      * @param mac
      * @return
      */
-    @GetMapping("/getLab/{mac}")
-    public Message getLabInformation(@PathVariable("mac") String mac){
+    @GetMapping("/getlab")
+    public Message getLabInformation(String mac){
         Integer LabId = Confirm_Identity(mac);
         if (LabId == null){
             return new Message().error(2222,"无此实验室或者Mac地址错误");
@@ -110,7 +110,7 @@ public class IpcController {
      * @param newone
      * @return
      */
-    @PostMapping("/getElectric")
+    @PostMapping("/getelectric")
     public Message getElectricInformation(new_electric_equip newone){
         String mac = newone.getMac();
         Integer LabId = Confirm_Identity(mac);
@@ -155,7 +155,7 @@ public class IpcController {
      * @param newone
      * @return
      */
-    @PostMapping("/getEntryPower")
+    @PostMapping("/getentrypower")
     public Message getEntryPowerInformation(new_entry_power newone){
         String mac = newone.getMac();
         Integer LabId = Confirm_Identity(mac);
@@ -201,6 +201,7 @@ public class IpcController {
      */
     private Integer Confirm_Identity(String mac){
         Integer LabId = labService.getLabId(mac);
+        System.out.println(LabId);
         return LabId;
     }
 

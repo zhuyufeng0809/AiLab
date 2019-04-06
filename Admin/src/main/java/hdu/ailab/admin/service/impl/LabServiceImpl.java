@@ -6,6 +6,8 @@ import hdu.ailab.admin.service.LabService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LabServiceImpl implements LabService {
 
@@ -20,5 +22,10 @@ public class LabServiceImpl implements LabService {
     @Override
     public lab getLabById(Integer id){
         return labMapper.getLabById(id);
+    }
+
+    @Override
+    public List<lab> getLab(){
+        return labMapper.getLab();
     }
 }

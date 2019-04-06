@@ -18,4 +18,29 @@ public class StaffAdminLabServiceImpl implements StaffAdminLabService {
         return staff_admin_labMapper.getStaffIdByLabId(LabId);
     }
 
+    @Override
+    public List<Integer> getLabId(Integer StaffId){
+        return staff_admin_labMapper.getLabIdByStaffId(StaffId);
+    }
+
+    @Override
+    public boolean addAdmin(Integer LabId,Integer StaffId){
+        Integer result = staff_admin_labMapper.insert(LabId,StaffId);
+        if (result == 1){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean deleteAdmin(Integer LabId,Integer StaffId){
+        Integer result = staff_admin_labMapper.delect(LabId,StaffId);
+        if (result == 1){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
