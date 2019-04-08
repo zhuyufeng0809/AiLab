@@ -2,6 +2,8 @@ package hdu.ailab.admin.service;
 
 
 import hdu.ailab.admin.bean.equipment_lab;
+import hdu.ailab.admin.bean.borrowequip;
+import hdu.ailab.admin.bean.returnequip;
 
 import java.util.List;
 
@@ -12,4 +14,8 @@ public interface EquipmentLabService {
     List<equipment_lab> getEquipment(Integer equipment_id, Integer lab_id);
 
     List<equipment_lab> getEquipment(String name);
+
+    List<borrowequip> getBorrow(Integer id);
+
+    List<returnequip> getReturn(Integer id);
 }

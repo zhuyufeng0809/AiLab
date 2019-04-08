@@ -1,7 +1,9 @@
 package hdu.ailab.admin.service.impl;
 
 import hdu.ailab.admin.bean.equipment_lab;
+import hdu.ailab.admin.bean.returnequip;
 import hdu.ailab.admin.dao.equipment_labMapper;
+import hdu.ailab.admin.bean.borrowequip;
 import hdu.ailab.admin.service.EquipmentLabService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,4 +31,13 @@ public class EquipmentLabServiceImpl implements EquipmentLabService {
         return equipment_labMapper.getEquipmentByUsePeople(name);
     }
 
+    @Override
+    public List<borrowequip> getBorrow(Integer id){
+        return equipment_labMapper.getBorrow(id);
+    }
+
+    @Override
+    public List<returnequip> getReturn(Integer id){
+        return equipment_labMapper.getReturn(id);
+    }
 }

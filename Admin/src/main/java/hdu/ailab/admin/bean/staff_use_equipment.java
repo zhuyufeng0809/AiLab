@@ -15,7 +15,7 @@ public class staff_use_equipment {
 
     private Date useWillReturnTime;
 
-    private Integer useRealReturnTime;
+    private Date useRealReturnTime;
 
     public Integer getEquipmentId() {
         return equipmentId;
@@ -65,11 +65,11 @@ public class staff_use_equipment {
         this.useWillReturnTime = useWillReturnTime;
     }
 
-    public Integer getUseRealReturnTime() {
+    public Date getUseRealReturnTime() {
         return useRealReturnTime;
     }
 
-    public void setUseRealReturnTime(Integer useRealReturnTime) {
+    public void setUseRealReturnTime(Date useRealReturnTime) {
         this.useRealReturnTime = useRealReturnTime;
     }
 }

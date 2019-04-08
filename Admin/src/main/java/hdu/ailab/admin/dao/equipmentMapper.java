@@ -1,9 +1,9 @@
 package hdu.ailab.admin.dao;
 
 import hdu.ailab.admin.bean.equipment;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
+
+import java.util.List;
 
 @Mapper
 public interface equipmentMapper {
@@ -13,4 +13,5 @@ public interface equipmentMapper {
 
     @Select("select * from equipment where equipment_id = #{id}")
     equipment getEquipById(@Param("id") Integer id);
+
 }
