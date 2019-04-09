@@ -28,4 +28,7 @@ public interface staffMapper {
 
     @Select("select staff_name from staff where staff_id = #{id}")
     String getNameById(@Param("id") Integer id);
+
+    @Select("select uuid from staff where staff_id = #{id}")
+    Integer existStaff(@Param("id") Integer id);
 }

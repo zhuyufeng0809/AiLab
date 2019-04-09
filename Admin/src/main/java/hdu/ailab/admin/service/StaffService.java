@@ -15,4 +15,6 @@ public interface StaffService {
     boolean updateStaff(Integer id,Integer role);
 
     String getName(Integer id);
+
+    Integer existStaff(Integer id);
 }

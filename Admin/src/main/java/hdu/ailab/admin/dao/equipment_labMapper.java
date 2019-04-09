@@ -1,5 +1,6 @@
 package hdu.ailab.admin.dao;
 
+import hdu.ailab.admin.bean.equipid_num;
 import hdu.ailab.admin.bean.equipment_lab;
 import hdu.ailab.admin.bean.borrowequip;
 import hdu.ailab.admin.bean.returnequip;
@@ -44,4 +45,11 @@ public interface equipment_labMapper {
             "where lab_id = 10 and use_real_return_time is not null\n" +
             "\n")
     List<returnequip> getReturn(@Param("lab_id") Integer id);
+
+    @Select("select equipment_id,equipment_number from equipment_lab where equipment_rfid =#{rfid}")
+    equipid_num getIdNumByRfid(@Param("rfid") Integer rfid);
+
+    @Select("select equipment_number from equipment_lab where equipment_rfid =#{rfid}")
+    Integer getNumByRfid(@Param("rfid") Integer rfid);
 }
+

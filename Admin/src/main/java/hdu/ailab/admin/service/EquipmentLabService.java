@@ -1,6 +1,7 @@
 package hdu.ailab.admin.service;
 
 
+import hdu.ailab.admin.bean.equipid_num;
 import hdu.ailab.admin.bean.equipment_lab;
 import hdu.ailab.admin.bean.borrowequip;
 import hdu.ailab.admin.bean.returnequip;
@@ -18,4 +19,8 @@ public interface EquipmentLabService {
     List<borrowequip> getBorrow(Integer id);
 
     List<returnequip> getReturn(Integer id);
+
+    equipid_num getIdNum(Integer rfid);
+
+    Integer getNum(Integer rfid);
 }

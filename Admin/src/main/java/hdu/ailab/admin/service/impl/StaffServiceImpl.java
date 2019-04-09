@@ -43,4 +43,9 @@ public class StaffServiceImpl implements StaffService {
     public String getName(Integer id){
         return staffMapper.getNameById(id);
     }
+
+    @Override
+    public Integer existStaff(Integer id){
+        return staffMapper.existStaff(id);
+    }
 }

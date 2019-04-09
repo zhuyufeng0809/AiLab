@@ -1,5 +1,6 @@
 package hdu.ailab.admin.service.impl;
 
+import hdu.ailab.admin.bean.equipid_num;
 import hdu.ailab.admin.bean.equipment_lab;
 import hdu.ailab.admin.bean.returnequip;
 import hdu.ailab.admin.dao.equipment_labMapper;
@@ -39,5 +40,15 @@ public class EquipmentLabServiceImpl implements EquipmentLabService {
     @Override
     public List<returnequip> getReturn(Integer id){
         return equipment_labMapper.getReturn(id);
+    }
+
+    @Override
+    public equipid_num getIdNum(Integer rfid){
+        return equipment_labMapper.getIdNumByRfid(rfid);
+    }
+
+    @Override
+    public Integer getNum(Integer rfid){
+        return equipment_labMapper.getNumByRfid(rfid);
     }
 }
