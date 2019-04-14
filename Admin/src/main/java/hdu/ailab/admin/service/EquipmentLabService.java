@@ -23,4 +23,6 @@ public interface EquipmentLabService {
     equipid_num getIdNum(Integer rfid);
 
     Integer getNum(Integer rfid);
+
+    equipment_lab getEquip(Integer rfid);
 }

@@ -21,9 +21,9 @@ public interface staff_use_equipmentMapper {
             "values (#{equipmentId},#{uuid},#{equipmentNumber},#{staffId},#{useBoorrowTime},#{useWillReturnTime},#{useRealReturnTime})")
     Integer insertborrow(staff_use_equipment record);
 
-    @Update("update staff_use_equipment set use_real_return_time = #{date} where equipment_number = #{number}")
+    @Update("update staff_use_equipment set use_real_return_time = #{date} where equipment_number = #{number} and use_real_return_time is null")
     Integer updatereturn(@Param("number") Integer number,@Param("date") Date returndate);
 
-    @Select("select count(*) from staff_use_equipment where equipment_number = #{number}")
+    @Select("select count(*) from staff_use_equipment where equipment_number = #{number} and use_real_return_time is null")
     Integer checkexist(@Param("number") Integer number);
 }

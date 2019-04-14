@@ -51,5 +51,8 @@ public interface equipment_labMapper {
 
     @Select("select equipment_number from equipment_lab where equipment_rfid =#{rfid}")
     Integer getNumByRfid(@Param("rfid") Integer rfid);
+
+    @Select("select * from equipment_lab where equipment_rfid = #{rfid}")
+    equipment_lab getEquipByRfid(@Param("rfid") Integer rfid);
 }
 

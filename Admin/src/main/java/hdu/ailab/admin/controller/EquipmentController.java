@@ -190,6 +190,11 @@ public class EquipmentController {
 
     }
 
+    /**
+     * 验证人员
+     * @param id
+     * @return
+     */
     @PostMapping("/confirmstaff")
     public boolean ConfirmStaff(Integer id){
         Integer uuid = staffService.existStaff(id);
@@ -200,6 +205,11 @@ public class EquipmentController {
         }
     }
 
+    /**
+     * 验证设备
+     * @param rfid
+     * @return
+     */
     @PostMapping("/confirmequip")
     public boolean ConfirmEquip(Integer rfid){
         Integer num = equipmentLabService.getNum(rfid);
@@ -208,6 +218,24 @@ public class EquipmentController {
         } else {
             return false;
         }
+    }
+
+    /**
+     * 获取设备信息
+     * @param rfid
+     * @return
+     */
+    @GetMapping("/getequip")
+    public Message getEquip(Integer rfid){
+        equipment_lab temp1 = equipmentLabService.getEquip(rfid);
+        equipment temp2 = equipmentService.getEquip(temp1.getEquipmentId());
+        HashMap<String,Object> target = new HashMap<>();
+        target.put("name",temp2.getEquipmentName());
+        target.put("type",temp2.getEquipmentType());
+        target.put("number",temp1.getEquipmentNumber());
+        target.put("usepeople",temp1.getEquipmentUsePeople());
+        target.put("location",temp1.getEquipmentLocation());
+        return new Message().ok(6666,"success get equip").addData("result",target);
     }
 
     /**

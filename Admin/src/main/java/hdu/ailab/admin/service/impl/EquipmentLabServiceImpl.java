@@ -51,4 +51,10 @@ public class EquipmentLabServiceImpl implements EquipmentLabService {
     public Integer getNum(Integer rfid){
         return equipment_labMapper.getNumByRfid(rfid);
     }
+
+    @Override
+
+    public equipment_lab getEquip(Integer rfid){
+        return equipment_labMapper.getEquipByRfid(rfid);
+    }
 }
